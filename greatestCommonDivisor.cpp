@@ -1,18 +1,20 @@
 #include <iostream>
 using namespace std;
-
-int main(){
-    int num1, num2, i, gcd;
-    cout << "Greatest Common Divisor:" << endl;
-    cout << "Enter the first number: ";
-    cin >> num1;
-    cout << "Enter the second number: ";
-    cin >> num2;
-    for(i=1; i <=num1 && i <=num2; i++){
-        if(num1%i==0 && num2%i==0){
-            gcd = i;
-        }
+int main ()
+{
+    double c, f, choice;
+    cout << "Choose an option:\n1. Celcius to Farenheit.\n2. Farenheit to Celcius.\n\nYour Choice: ";
+    cin >> choice;
+    if(choice==1){
+        cout << "Enter Celcius: ";cin>>c;
+        f = c*1.8+32;
+        cout << "Farenheit: "<<f<<endl;
+    }else if(choice==2){
+        cout << "Enter Farenheit: ";cin>>f;
+        c = (f-32)/1.8;
+        cout << "Celcius: "<<c<<endl;
     }
-    cout << "Greatest common divisor is " << gcd;
+
+
     return 0;
 }
